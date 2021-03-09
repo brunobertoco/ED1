@@ -1,7 +1,22 @@
 #include <stdio.h>
 
 int main(){
-    printf("<< Listando um vetor >>\n");
+    int v[5];
+    
+    printf("<< Listando um vetor >> \nEntre com o numero 1: ");
+    scanf("%d",&v[0]);
+    printf("Entre com o numero 2: ");
+    scanf("%d",&v[1]);
+    printf("Entre com o numero 3: ");
+    scanf("%d",&v[2]);
+    printf("Entre com o numero 4: ");
+    scanf("%d",&v[3]);
+    printf("Entre com o numero 5: ");
+    scanf("%d",&v[4]);
+    printf("Entre com o numero 6: ");
+    scanf("%d",&v[5]);
+
+    printf("Os valores lido sao: %d %d %d %d %d %d ",v[0],v[1],v[2],v[3],v[4],v[5]);
 
     return 0;
 }
