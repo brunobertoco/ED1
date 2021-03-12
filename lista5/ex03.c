@@ -2,6 +2,17 @@
 
 
 int main(){
+
+    int a=0,v[5];
+
+    printf("<< Listando um vetor >>\n");
+    while (a<6)  {
+        printf("Entre com o numero %d: ",a+1);
+        scanf("%d",&v[a]);
+        a++;
+    }
+    printf("Os valores lidos sao: %d %d %d %d %d %d",v[5],v[4],v[3],v[2],v[1],v[0]);
+
     return 0;
 }
 

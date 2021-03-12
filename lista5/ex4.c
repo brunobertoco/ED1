@@ -1,8 +1,21 @@
 #include <stdio.h>
 
 int main(){
-    printf("<< Listando um vetor em ordem inversa >>\n");
+    int a=0,v[5];
 
+    printf("<< Listando um vetor de numeros pares >>\n");
+    while(a<6){
+        printf("Entre com o numero %d: ",a+1);
+        scanf("%d",&v[a]);
+            while(v[a]<0 || v[a]%2!=0){
+                printf("Erro: Valor invalido\n");
+                printf("Entre com o numero %d: ",a+1);
+                scanf("%d",&v[a]);
+            }
+        a++;
+    }
+    printf("Os numeros pares digitados foram: %d %d %d %d %d %d",v[0],v[1],v[2],v[3],v[4],v[5]);
+    
     return 0;
 }
 
