@@ -1,7 +1,32 @@
 #include <stdio.h>
 
 int main(){
+    int a=0,v[4],menor=0,maior=0;
+    float media;
+
     printf("<< Normalizando as notas >>\n");
+    while (a<5)  {
+        printf("Entre com a nota do aluno %d: ",a+1);
+        scanf("%d",&v[a]);
+        if(a==0){maior=v[a];menor=v[a];}
+        if(v[a]>maior){
+            maior=v[a];
+        }
+        else{
+            if(v[a]<menor){
+                menor=v[a];
+            }
+         }
+        a++;
+    }
+
+    a=0;
+
+    printf("\nNotas normalizadas\n");
+    while(a<5){
+        printf("\nA nota do aluno %d é %d", a+1,((v[a]*100)/maior));
+        a++;
+    }
 
     return 0;
 }
