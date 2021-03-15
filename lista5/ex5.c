@@ -24,7 +24,7 @@ int main(){
     printf("Max. Value: %d\n", maior);
     printf("Min. Value: %d\n", menor);
     media = (v[0]+v[1]+v[2]+v[3]+v[4])/5;
-    printf("Mean: %f\n", media);
+    printf("Mean: %2f\n", media);
 
     return 0;
 }

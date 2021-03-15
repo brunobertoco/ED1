@@ -1,15 +1,30 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(){
-    printf("<< Media e desvio-padrao >>\n");
+    int a=0;
+    float v[5],media,desvio;
 
+     printf("<< Media e desvio-padrao >>\n");
+
+     while (a<5)  {
+        printf("Entre com o numero %d: ",a+1);
+        scanf("%f",&v[a]);
+        a++;
+    }
+
+    media = (v[0]+v[1]+v[2]+v[3]+v[4])/5;
+
+    desvio = sqrt(((pow((v[0]-media),2)) + (pow((v[1]-media),2)) + (pow((v[2]-media),2)) + (pow((v[3]-media),2)) + (pow((v[4]-media),2)))/4);
+
+    printf("A media eh %.2f e o desvio-padrao eh %.2f",media,desvio);
     return 0;
 }
 
 /*
 Calcular a média e o desvio padrão amostral de 5 números informados pelo usuário.
-obs: desvio-padrão (amostral, normalizado por N-1)
 
+deobs: desvio-padrão (amostral, normalizado por N-1)
 Exemplo de saída:
 << Media e desvio-padrao >>
 Digite o valor 1: 50
