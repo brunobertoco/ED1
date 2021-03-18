@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main(){
-    int a,nota[99],i,n;
+    int a,nota[100],i,n;
     float media,soma;
 
     printf("<< Media de n alunos. Maximo 100 alunos >>\nEntre com o numero de alunos: ");
     scanf("%d",&a);
-    if(a<100){
+    if(a<=100){
         for(i=0,soma=0;i<a;i++){
             printf("Digite a nota do aluno %d: ",i+1);
             scanf("%d",&nota[i]);

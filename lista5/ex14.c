@@ -1,8 +1,28 @@
 #include <stdio.h>
 
 int main(){
-    printf("<< Universidade X >>\n");
+    int alunos[10000],n,i;
+    char social[10000];
+    float CRA[10000];
 
+    printf("<< Universidade X >>\n");
+    printf("Quantos alunos serao cadastrados: ");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++){
+        printf("\nEntre com o numero do aluno: ");
+        scanf("%d",&alunos[i]);
+        printf("Entre com a classe social do aluno %d:",alunos[i]);
+        setbuf(stdin,NULL);
+        scanf("%c",&social[i]);
+        printf("Entre com o CRA do aluno %d:",alunos[i]);
+        scanf("%f",&CRA[i]);
+    }
+
+    printf("\n==== Alunos Cadastrados ====\n");
+    for(i=0;i<n;i++){
+        printf("Número: %d Classe Social: %c CRA: %.2f\n",alunos[i],social[i],CRA[i]);
+    }
     return 0;
 }
 

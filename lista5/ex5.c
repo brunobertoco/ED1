@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int main(){
-    int a=0,v[4],menor=0,maior=0;
-    float media;
+    int a=0,menor=0,maior=0;
+    float media,v[5];
 
     printf("<< Five Values >>\n");
     while (a<5)  {
         printf("Input #%d: ",a+1);
-        scanf("%d",&v[a]);
+        scanf("%f",&v[a]);
         if(a==0){maior=v[a];menor=v[a];}
         if(v[a]>maior){
             maior=v[a];
@@ -20,11 +20,11 @@ int main(){
         a++;
     }
 
-    printf("The numbers entered are: %d %d %d %d %d\n",v[0],v[1],v[2],v[3],v[4]);
+    printf("The numbers entered are: %.0f %.0f %.0f %.0f %.0f\n",v[0],v[1],v[2],v[3],v[4]);
     printf("Max. Value: %d\n", maior);
     printf("Min. Value: %d\n", menor);
     media = (v[0]+v[1]+v[2]+v[3]+v[4])/5;
-    printf("Mean: %2f\n", media);
+    printf("Mean: %.2f\n", media);
 
     return 0;
 }

@@ -1,16 +1,33 @@
 #include <stdio.h>
 
 int main(){
-    int a,v[7];
-    
+    int v[8],aux;
     printf("<< Valores iguais >>\n");
-    
-    while(a<7){
-        printf("Entre com o numero %d: ",a+1);
-        scanf("%d", &v[a]);
-        
-
+    for(int i=0;i<8;i++){
+        printf("Entre com o numero %d: ",i+1);
+        scanf("%d",&v[i]);
     }
+
+    
+    for(int i=0;i<8;i++){
+        for(int j=i+1;j<8;j++){
+            if(v[i]==v[j]){
+                aux=v[i+1];
+                v[i+1]=v[j];
+                v[j]=aux;
+            }
+        }
+    }
+    aux=0;
+    printf("Valores repetidos:");
+    for(int i=1;i<8;i++){
+        if(v[i]==v[i-1]&&aux!=v[i]){
+            printf("%d ",v[i]);
+            aux=v[i];
+        }
+    }
+
+
     return 0;
 }
 

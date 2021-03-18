@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int a,v[4];
+    int a,v[5];
     printf("<< Zerando negativos >>\n");
     while(a<5){
         printf("Entre com o numero %d: ",a+1);

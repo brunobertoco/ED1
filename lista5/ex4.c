@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int a=0,v[5];
+    int a=0,v[6];
 
     printf("<< Listando um vetor de numeros pares >>\n");
     while(a<6){
